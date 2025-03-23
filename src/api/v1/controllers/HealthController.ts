@@ -6,6 +6,8 @@ class HealthController {
 	public static getHealthStatus(_: Request, res: Response): void {
 		const healthStatus: HealthStatus = HealthService.healthStatus;
 
+		throw new Error("Wooowie");
+
 		res.status(200).json(healthStatus);
 	}
 }

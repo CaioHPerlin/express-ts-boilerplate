@@ -8,7 +8,7 @@ const errorHandler = (
 	next: NextFunction
 ) => {
 	// Development error handling
-	if (res.headersSent || process.env.NODE_ENV === "development") {
+	if (res.headersSent || process.env.DEBUG === "true") {
 		next(err);
 		return;
 	}
