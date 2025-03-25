@@ -1,4 +1,4 @@
-import ServiceUnavailableError from "@/errors/ServiceUnavailableError";
+import { ServiceUnavailableError } from "@/errors";
 import { HealthStatus } from "../interfaces";
 
 class HealthService {

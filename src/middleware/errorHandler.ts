@@ -1,4 +1,4 @@
-import CustomError from "@/errors/CustomError";
+import { CustomError } from "@/errors";
 import { getErrorMessage } from "@/utils";
 import { NextFunction, Request, Response } from "express";
 
