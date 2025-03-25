@@ -1,14 +1,15 @@
-# Express + Typescript REST API Template
+# Express + Typescript REST API Boilerplate
 
-This repository provides a basic structure for building REST APIs using Express and TypeScript. It includes essential configurations and dependencies to help you get started quickly.
+This repository provides a basic structure for building REST APIs using Express and TypeScript. It includes essential configurations and dependencies required to help you get started quickly and securely.
 
 ## Features
 
 - Express server setup with TypeScript
-- Basic middleware configuration (CORS, JSON parsing)
+- Basic middleware configuration (CORS, JSON parsing, Global Error Handler)
+- Support for Custom Errors
 - Pre-configured ESLint and Prettier for code quality and formatting
 - Environment variable management with `dotenv`
-- Basic folder structure for organizing your API
+- Basic folder structure for organizing and versioning your API
 
 ## Getting Started
 
@@ -22,8 +23,8 @@ This repository provides a basic structure for building REST APIs using Express 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/document-manager-api.git
-   cd document-manager-api
+   git clone https://github.com/your-username/express-ts-boilerplate.git
+   cd express-ts-boilerplate
    ```
 
 2. Install dependencies:
@@ -38,6 +39,8 @@ This repository provides a basic structure for building REST APIs using Express 
 
    ```bash
    PORT=5000
+   NODE_ENV=development
+   DEBUG=false
    ```
 
 ### Running the Server
@@ -73,7 +76,7 @@ yarn lint
 ## Project Structure
 
 ```
-document-manager-api/
+express-ts-boilerplate/
 ├── dist/                   # Compiled files
 ├── node_modules/           # Node.js modules
 ├── src/                    # Source files
@@ -81,14 +84,19 @@ document-manager-api/
 │   │   ├── v1/             # Version 1 of the API
 │   │   │   ├── controllers/
 │   │   │   ├── interfaces/
-│   │   │   ├── middleware/
+│   │   │   ├── models/
+│   │   │   ├── repositories/
 │   │   │   ├── routes/
 │   │   │   └── services/
 │   ├── config/             # Configuration files
 │   │   └── db.ts           # Database configuration
+│   ├── errors/             # Custom error classes
+│   ├── middleware/         # Custom middleware
+│   ├── utils/              # Utility functions
 │   └── app.ts              # Main application file
 ├── .gitignore              # Git ignore file
 ├── .prettierrc             # Prettier configuration
+├── .prettierignore         # Prettier ignore file
 ├── eslint.config.mjs       # ESLint configuration
 ├── package.json            # NPM package configuration
 ├── tsconfig.json           # TypeScript configuration
